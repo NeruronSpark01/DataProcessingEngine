@@ -9,10 +9,16 @@ import java.sql.DriverManager
 import java.sql.{Connection,DriverManager}
 
 
-class DBConnectionClass {
-  val user = "root"
-  val pass = "admin"
-  val url = "jdbc:mysql://172.16.40.5/scalatest"
+class DBEDBConnectionClass {
+  var user = "root"
+  var pass = "admin"
+  var url = "jdbc:mysql://172.16.40.5/scalatest"
+  def Init(puser:String, ppass:String, purl:String) {
+    this.user=puser;
+    this.pass=puser;
+    this.url = purl;
+  } 
+  
   def readDataBase() = {
    try {
         Class.forName("com.mysql.jdbc.Driver")
@@ -26,10 +32,3 @@ class DBConnectionClass {
 }
 }
 
- object TestAppMain {
- def main(args: Array[String]){
-    val DBconnObject = new DBConnectionClass
-    DBconnObject.readDataBase
-    println("Check DB Is connected or not")
-}
-}
