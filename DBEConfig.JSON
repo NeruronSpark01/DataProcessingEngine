@@ -1,1 +1,5 @@
-
+config 
+{
+ "CONFIG_DB_INFO " : { "DBNAME" : "databasename", "uid" : "uid", "password" : "pass", "host" : "pass"} ,
+ "OUTPUT_DB_INFO " : { "DBNAME" : "databasename", "uid" : "uid", "password" : "pass", "host" : "pass"} ,
+}
